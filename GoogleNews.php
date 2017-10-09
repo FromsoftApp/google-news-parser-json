@@ -49,6 +49,7 @@ class GoogleNews {
                 $newsSections = explode('<font size="-1">', $item->description);
 
                 $news[$i]['title'] = (string) $item->title;
+                $news[$i]['link'] = (string) $item->link;
                 $news[$i]['image'] = $match[1];
                 $news[$i]['news_source'] = strip_tags($newsSections[1]);
                 $news[$i]['short_story'] = strip_tags($newsSections[2]);
